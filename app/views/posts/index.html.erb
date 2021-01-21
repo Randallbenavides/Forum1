@@ -1,9 +1,9 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Posts</h1>
 
-<table>
-  <thead>
+<table class="table table table-hover table-striped table-bordered">
+  <thead class="thead-blue">
     <tr>
       <th>Title</th>
       <th>Content</th>
@@ -17,13 +17,10 @@
         <td><%= post.title %></td>
         <td><%= post.content %></td>
         <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Comment', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<%= link_to "New post", posts_new_path, class:"btn btn-primary" %>
